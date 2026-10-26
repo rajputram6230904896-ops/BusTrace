@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>BusTrace — AI-Powered Cloud Bus Tracking Platform</title>
+    <meta name="description" content="Know Your Bus. Save Your Time. Smart community-powered public bus tracking and transparent arrival estimation for students and commuters." />
+    <meta property="og:title" content="BusTrace — Smart Bus Tracking Platform" />
+    <meta property="og:description" content="Know Your Bus. Save Your Time. Discover routes, check transparent ETAs, and share verified community updates." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#0a192f" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="BusTrace" />
+    <link rel="manifest" href="/public/manifest.json" />
+    <link rel="apple-touch-icon" href="/src/assets/images/bustrace_app_icon_1793000806882.jpg" />
+    <link rel="icon" type="image/jpeg" href="/src/assets/images/bustrace_app_icon_1793000806882.jpg" />
+    <!-- Leaflet CSS for interactive OpenStreetMap rendering -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <!-- Modern Sans typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/public/sw.js').catch((err) => {
+            console.log('SW registration note:', err);
+          });
+        });
+      }
+    </script>
+  </head>
+  <body class="bg-slate-950 text-slate-100 antialiased selection:bg-blue-600 selection:text-white">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
